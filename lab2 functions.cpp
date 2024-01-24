@@ -64,8 +64,18 @@ int OpposingTeamPossesion(int opponentscore){
     return opponentscore;
 };
 
+string pickplayer(vector<string> playernames){
+    int randomnumber;
+    randomnumber = (rand() % 5) + 1;
+    string player;
+    player = playernames[randomnumber - 1];
+    return player;
+};
+
+
 
 int main(){
+        string playernames[5] = {"P1,P2,P3,P4,P5"};
 // Asks the user to choose an option, moves to what they chose
     cout << "Choose an Action:\n 1. Shoot \n 2.Pass \n 3. See Player Stats \n 4. See score";
     int choice;
