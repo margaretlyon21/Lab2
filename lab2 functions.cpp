@@ -40,6 +40,29 @@ class player{
 
 };
 
+int OpposingTeamPossesion(int opponentscore){
+    while (true){
+        bool shotMade = (rand() % 100) < 60;
+
+        if (shotMade){
+            cout << "Opposing team made the shot! (2 Points)";
+            opponentscore += 2;
+        } 
+        else{
+            bool rebound = (rand() % 100) < 50;
+            if (rebound){
+                cout << "Opposing team made the rebound!";
+            }
+            else{
+                cout << "Opposing team missed the rebound... Its your ball!";
+                return false;
+            }
+        }
+    }
+    return opponentscore;
+};
+
+
 int main(){
 // Asks the user to choose an option, moves to what they chose
     cout << "Choose an Action:\n 1. Shoot \n 2.Pass \n 3. See Player Stats \n 4. See score";
