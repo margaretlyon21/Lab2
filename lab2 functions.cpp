@@ -65,10 +65,8 @@ int OpposingTeamPossesion(int opponentscore){
 };
 
 string pickplayer(vector<string> playernames){
-    int randomnumber;
-    randomnumber = (rand() % 5) + 1;
-    string player;
-    player = playernames[randomnumber - 1];
+    int randomnumber = (rand() % 5) + 1;
+    string player = playernames[randomnumber - 1];
     return player;
 };
 
