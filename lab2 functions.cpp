@@ -41,24 +41,26 @@ class player{
 };
 
 int OpposingTeamPossesion(int opponentscore){
+    cout << "***********************************************\n";
     while (true){
         bool shotMade = (rand() % 100) < 60;
 
         if (shotMade){
-            cout << "Opposing team made the shot! (2 Points)";
+            cout << "Opposing team made the shot! (2 Points)\n";
             opponentscore += 2;
         } 
         else{
             bool rebound = (rand() % 100) < 50;
             if (rebound){
-                cout << "Opposing team made the rebound!";
+                cout << "Opposing team made the rebound!\n";
             }
             else{
-                cout << "Opposing team missed the rebound... Its your ball!";
+                cout << "Opposing team missed the rebound... Its your ball!\n";
                 return false;
             }
         }
     }
+    cout << "***********************************************\n";
     return opponentscore;
 };
 
